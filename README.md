@@ -7,4 +7,4 @@
 RomM-PS3NetSrv-Cross-Mapping](https://github.com/AccuraHub/RomM-PS3NetSrv-Cross-Mapping/) script that maps RomM folder structure to PS3NetSrv - simply by creating symbolic links at PS3NetSrv path.
 
 ## How it works
-During creation of container, script scans the RomM library and then links elements to the appropriate PS3NetSrv folders.
+During creation of container, script scans the RomM library and then links elements to the appropriate PS3NetSrv folders inside docker container.
