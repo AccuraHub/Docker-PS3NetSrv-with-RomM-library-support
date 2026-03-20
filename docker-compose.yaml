@@ -1,0 +1,9 @@
+services:
+  ps3netsrv:
+    image: ps3netsrv
+    container_name: ps3netsrv
+    hostname: ps3netsrv
+    volumes:
+      - /romm/library/roms:/ps3netsrv/ROMM_LIBRARY:ro
+    ports:
+      - 38008:38008
