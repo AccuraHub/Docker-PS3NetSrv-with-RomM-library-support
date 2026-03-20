@@ -25,7 +25,7 @@ During creation of container, script scans the RomM library and then links suppo
 
 ## Quick Start
 > [!IMPORTANT]
-> Always mount RomM library as `READ-ONLY`. Without this option, you risk damaging your collection in case of failure!
+> Always mount RomM library as `READ-ONLY`. Without this option, you risk damaging your collection due to misconfiguration, user error or other circumstances!
 
 Clone this repository, build image, specify your RomM library path in `docker-compose.yaml` and run.
 
