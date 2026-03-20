@@ -3,9 +3,10 @@
   ![banner](https://github.com/AccuraHub/Docker-PS3NetSrv-with-RomM-library-support/blob/main/banner.png?raw=true)
 
   ### Store and play your ROMs with class
-   
-</div>
 
+  ![Static Badge](https://img.shields.io/badge/Phase-Under%20development-gold)
+  
+</div>
 
 # Overview
 <div align="justify">
