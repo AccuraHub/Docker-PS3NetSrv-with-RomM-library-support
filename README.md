@@ -89,11 +89,3 @@ services:
     ports:
       - 38008:38008
 ```
-
-### Permissions
-> [!NOTE]
-> to-do
-
-### Issues
-> [!NOTE]
-> to-do
