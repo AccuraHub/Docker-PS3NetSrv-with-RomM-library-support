@@ -21,7 +21,7 @@ RomM-PS3NetSrv-Cross-Mapping](https://github.com/AccuraHub/RomM-PS3NetSrv-Cross-
 During creation of container, script scans the RomM library and then links supported items to the appropriate PS3NetSrv folders inside docker container.
 
 > [!NOTE]
-> **Docker-PS3NetSrv-with-RomM-library-support** can be started without RomM liblary support, which will make it work like pure PS3NetSrv inside docker container. See [Configuration](#configuration) for a complete reference.
+> **Docker-PS3NetSrv-with-RomM-library-support** can be started without RomM library support, which will make it work like pure PS3NetSrv inside docker container. See [Configuration](#configuration) for a complete reference.
 
 ## Quick Start
 > [!IMPORTANT]
@@ -60,17 +60,40 @@ sudo docker compose up -d
 > ```
 
 ## Configuration
-
-> [!IMPORTANT]
-> This part is still under development and wasn't tested.
-
 ### Environment variables
 | Variable | Default value | Description |
 |---|---|---|
 | SYNC_ROMM_PATH | `true` | when this option is enabled container will scan RomM library on startup |
 | PS3NETSRV_PORT | `38008` | port on which PS3NetSrv is running |
-| | |
+
+### Running without RomM library support
+**Docker-PS3NetSrv-with-RomM-library-support** can be started without RomM library support, which will make it work like pure PS3NetSrv inside docker container. To do that change `SYNC_ROMM_PATH` to `false` in `docker-compose.yaml` and specify your PS3NetSrv path as volume
+
+```yaml
+services:
+  ps3netsrv:
+    image: ps3netsrv
+    container_name: ps3netsrv
+
+    environment:
+      - PS3NETSRV_PORT=38008
+      - SYNC_ROMM_PATH=false
+
+    volumes:
+      # Volume for RomM support
+      # - /romm/library/roms:/ps3netsrv/ROMM_LIBRARY:ro
+
+      # Uncomment if you want use standard PS3NetSrv folder structure 
+      - ./ps3netsrv:/ps3netsrv:ro
+
+    ports:
+      - 38008:38008
+```
 
 ### Permissions
+> [!NOTE]
+> to-do
 
 ### Issues
+> [!NOTE]
+> to-do

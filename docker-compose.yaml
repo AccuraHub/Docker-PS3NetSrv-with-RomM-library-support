@@ -8,7 +8,11 @@ services:
       - SYNC_ROMM_PATH=true
 
     volumes:
+      # Volume for RomM support
       - /romm/library/roms:/ps3netsrv/ROMM_LIBRARY:ro
-      
+
+      # Uncomment if you want use standard PS3NetSrv folder structure 
+      # - ./ps3netsrv:/ps3netsrv:ro
+
     ports:
       - 38008:38008
