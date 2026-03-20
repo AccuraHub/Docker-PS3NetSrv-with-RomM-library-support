@@ -2,8 +2,13 @@ services:
   ps3netsrv:
     image: ps3netsrv
     container_name: ps3netsrv
-    hostname: ps3netsrv
+
+    environment:
+      - PS3NETSRV_PORT=38008
+      - SYNC_ROMM_PATH=true
+
     volumes:
       - /romm/library/roms:/ps3netsrv/ROMM_LIBRARY:ro
+      
     ports:
       - 38008:38008
