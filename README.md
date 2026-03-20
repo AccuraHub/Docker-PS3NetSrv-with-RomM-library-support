@@ -65,10 +65,10 @@ sudo docker compose up -d
 > This part is still under development and wasn't tested.
 
 ### Environment variables
-| Variable | Description |
-|---|---|
-| SYNC_ROMM_PATH | default `true`, when this option is enabled container will scan RomM library on startup |
-| PS3NETSRV_PORT | default `38008`, port on which PS3NetSrv is running |
+| Variable | Default value | Description |
+|---|---|---|
+| SYNC_ROMM_PATH | `true` | when this option is enabled container will scan RomM library on startup |
+| PS3NETSRV_PORT | `38008` | port on which PS3NetSrv is running |
 | | |
 
 ### Permissions
