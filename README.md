@@ -67,7 +67,7 @@ sudo docker compose up -d
 | PS3NETSRV_PORT | `38008` | port on which PS3NetSrv is running |
 
 ### Running without RomM library support
-**Docker-PS3NetSrv-with-RomM-library-support** can be started without RomM library support, which will make it work like pure PS3NetSrv inside docker container. To do that change `SYNC_ROMM_PATH` to `false` in `docker-compose.yaml` and specify your PS3NetSrv path as volume
+**Docker-PS3NetSrv-with-RomM-library-support** can be started without RomM library support, which will make it work like pure PS3NetSrv inside docker container. To do that change `SYNC_ROMM_PATH` to `false` in `docker-compose.yaml` and specify your local PS3NetSrv library path as volume
 
 ```yaml
 services:
