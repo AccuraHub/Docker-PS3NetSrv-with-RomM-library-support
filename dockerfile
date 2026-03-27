@@ -23,9 +23,9 @@ RUN apk update && \
 
 WORKDIR /ps3netsrv
 RUN mkdir GAMES PS3ISO PSXISO PS2ISO PSPISO BDISO DVDISO ROMS GAMEI PKG MOVIES MUSIC PICTURE REDKEY ROMM_LIBRARY && \
-    wget -O RomM-PS3NetSrv-Cross-Mapping.zip https://github.com/AccuraHub/RomM-PS3NetSrv-Cross-Mapping/archive/refs/tags/latest.zip && \
-    unzip RomM-PS3NetSrv-Cross-Mapping.zip && \
-    rm RomM-PS3NetSrv-Cross-Mapping.zip
+    wget -O RomM-PS3NetSrv-Cross-Mapping-1.0.1.zip https://github.com/AccuraHub/RomM-PS3NetSrv-Cross-Mapping/archive/refs/tags/latest.zip && \
+    unzip RomM-PS3NetSrv-Cross-Mapping-1.0.1.zip && \
+    rm RomM-PS3NetSrv-Cross-Mapping-1.0.1.zip
 
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["/init.sh"]
